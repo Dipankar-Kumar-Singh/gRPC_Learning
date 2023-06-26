@@ -1,12 +1,25 @@
 {
-  "name": "grpc",
+  "name": "grpc_learning",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dipankar-Kumar-Singh/gRPC_Learning.git"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dipankar-Kumar-Singh/gRPC_Learning/issues"
+  },
+  "homepage": "https://github.com/Dipankar-Kumar-Singh/gRPC_Learning#readme",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.8.16",
+    "@grpc/proto-loader": "^0.7.7"
+  }
 }
