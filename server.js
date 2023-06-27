@@ -43,12 +43,17 @@ function createTodo(call, callback) {
 
     toodos.push(todoItem) ;
 
-    console.log(call);
+    // console.log(call);
+    console.log(call.request)
+
+    // null is error object !
+    callback(null ,todoItem) ;
+    // console.log(callback) ;
 }
 
 
 function readTodos(call, callback) {
-
+    // can't send naked totods array because return type is 
+    // return type -->toDoItems --> array of item --> array name : items  
+    callback(null , {"items" : toodos})
 }
-
-

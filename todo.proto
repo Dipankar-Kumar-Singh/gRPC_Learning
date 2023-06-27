@@ -3,11 +3,11 @@ package todoPackage;
 
 service Todo {
     rpc createTodo(TodoItem) returns (TodoItem){};
-    rpc readTodos(void) returns (TodoItems){};
+    rpc readTodos(voidNoParams) returns (TodoItems){};
 };
 
 
-message void {   };
+message voidNoParams {   };
 message TodoItem {
     int32 id = 1;
     string text = 2;
