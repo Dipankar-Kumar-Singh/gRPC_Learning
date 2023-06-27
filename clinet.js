@@ -17,11 +17,22 @@ client.createTodo({
     "id" : -1 ,
     "text" : "Do Laundry"
 } , (err , response)=> {
-    console.log("Recived from server " ,JSON.stringify(response)) ;
+    // console.log("Recived from server " ,JSON.stringify(response)) ;
 })
 
 client.readTodos({} , (err , response)=> {
     response.items.forEach(element => {
-            console.log(element) ;
+            // console.log(element) ;
     });
 })
+
+
+// FOR STREAM .. 
+const call = client.readTodosStream() ;
+call.on("data" , item => {
+    // console.log("recived item from the server " + JSON.stringify(item)) ;
+    console.log("Server : ")
+    console.log(item) ;
+})
+
+call.on("end" , e => console.log("Stream ended ! , SEVER DONE !")) ;
